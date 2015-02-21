@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Vito Tafuni - dottore in informatica</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta name="description" content="web developer - programmer in many languages - software and databases designer - freelancer" >
+<meta name="keywords" content="Vito Tafuni, Vito, Tafuni, freelancer, dottore, altamura, informatica, design, web, www, cloud, amazon, Magento, Joomla, Wordpress, cms, db, database" >
+
+<style>
+	html { height:100%; width:100%; color:#fff; background:#fff url('biglietto.png') no-repeat 50% 50%; }
+	a,div#countdown, div#square {position:absolute;left:50%;top:50%;}
+	a.quine { display:block;width:280px;height:40px; margin-top:80px;margin-left:-120px;}
+	a.qr { margin-top:-140px;margin-left:100px;}
+	a.qr img {top:50%; left:50%;}
+	a.call span {display:none}
+	a.call {display: block; height: 25px;  margin-left: -120px; width: 200px;}
+	div#countdown {color:#000; font: normal 12px/13px Verdana,sans; margin-left:-218px; margin-top:-52px;}
+	sup{color:#E2007A; font-weight:bold;}
+	div#square {color:#000; font: bold 10px Verdana, sans; margin-top:-122px; margin-left:-72px;}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16844971-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+	var myWidth = 0, myHeight = 0;
+	if (typeof (window.innerWidth) == 'number') { //Chrome
+	     myWidth = window.innerWidth; 
+	     myHeight = window.innerHeight;
+	} else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+	     myWidth = document.documentElement.clientWidth; 
+	     myHeight = document.documentElement.clientHeight;
+	} else if (document.body && (document.body.clientWidth || document.body.clientHeight)) { //IE9
+	     myWidth = document.body.clientWidth; 
+	     myHeight = document.body.clientHeight;
+	}
+
+  function toggleqr(){
+	  var qr = document.getElementById('qr');
+	  
+	  if (qr.style.position == 'fixed'){
+		 qr.style.position='';
+		 qr.style.width='auto'
+		 qr.style.marginTop='';
+		 qr.style.marginLeft='';
+	  }else{
+		 qr.style.position="fixed";
+		 qr.style.width = Math.min(myWidth,myHeight)+'px';
+		 qr.style.marginTop = (-1 * parseInt(qr.style.width)/2)+'px';
+		 qr.style.marginLeft = (-1 * parseInt(qr.style.width)/2)+'px';
+	  }
+  }
+</script>
+</head>
+<body>
+<span class="vcard">
+	<span class="fn">Vito Tafuni</span> - 
+	<span class="title">dottore in informatica</span> - 
+	<span class="adr">
+		<span class="locality">Altamura</span> (Bari)
+	</span><br/>
+	<span class="email">vito&#64;vitotafuni.com</span><br/>
+	<span class="tel">
+		<span class="type">cell</span>: 
+		<span class="value">+39.328.20.10.182</span>
+	</span><br/>
+	<span class="url">http://vitotafuni.com</span><br/>	
+</span>
+<!-- Start of Zopim Live Chat Script -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + document.location.protocol + "//zopim.com/?7u5cYKdRUt0mNpi9WDxkNcWeVPNrT7vT' charset='utf-8' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- End of Zopim Live Chat Script -->
+
+<div id="countdown"></div>
+<a class="quine" title="bash quine" href="http://it.wikipedia.org/wiki/Quine" target="_blank"> </a>
+<a class="qr" href="javascript:void();" onclick="toggleqr()"><img id="qr" src="qrcode.png" /></a>
+<a class="call" href="tel:+393282010182"><span>3282010182</span></a>
+
+<script type="text/javascript">
+	var today = new Date();
+	var tomorrow = new Date(2011, 6, 19, 17, 00);
+	var count = (tomorrow - today)/1000;
+	var t;
+	
+	
+	var tick = function (){
+		var msg = document.getElementById('countdown');
+		
+		if(count <= 0){
+			msg.id = 'square';
+			msg.innerHTML = '2';
+			clearTimeout(t);
+		}else{
+			count -= 1;
+			var tmp = count/60/60/24;
+			var days = parseInt(tmp);
+			tmp = (tmp - days)*24;
+			var hours = parseInt(tmp);
+			tmp = (tmp - hours)*60;
+			var mins = parseInt(tmp);
+			tmp = (tmp - mins)*60;
+			var secs = parseInt(tmp);
+			msg.innerHTML = ['dottore<sup>2</sup> tra <span class="day">',days,'</span> giorn',(days==1? 'o':'i'),' <span class="hours">',(hours>9? '':'0')+hours,'</span>:<span class="min">',(mins>9? '':'0')+mins,'</span>:<span class="sec">',(secs>9? '':'0')+secs,'</span>'].join('');
+			t = setTimeout('tick()', 1000);
+		}
+	}
+	
+	t = setTimeout('tick()', 1000);
+	
+</script>
+
+<script type="text/javascript">
+$zopim.livechat.setLanguage('it');
+$zopim.livechat.bubble.hide()
+$zopim.livechat.window.setColor('#cc2480');
+</script>
+
+<script type="text/javascript">
+// de-anonymyzer for hidemyass.com
+function parseURL(txt){ return txt }
+</script>
+<script type="text/javascript">
+// de-anonymizer for anonymouse.org
+function dall(txt){ return txt.substr(txt.indexOf('http://www.vito')) }
+</script>
+<script type="text/javascript">
+// de-anonymizer
+if(this.location.hostname.indexOf('vitotafuni.com')<0)
+	window.location=dall('http://www.vitotafuni.com');
+
+// de-anonymizer iframe
+if(window.top!==window)
+	self.parent.location=document.location
+
+</script> 
+
+</body>
+</html>
+
